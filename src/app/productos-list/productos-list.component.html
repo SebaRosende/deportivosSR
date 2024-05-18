@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Tipo</th>
+        <th>Precio</th>
+        <th>Stock</th>
+        <th>Agregar al carrito</th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr *ngFor="let productos of producto">
+        <td>{{ productos.nombre }}</td>
+        <td>{{ productos.tipo }}</td>
+        <td>{{ productos.precio }}</td>
+        <td>{{ productos.stock }}</td>
+        <td><button class="btn btn-primary">Sumar</button></td>
+      </tr>
+    </tbody>
+  </table>
