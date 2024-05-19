@@ -3,4 +3,6 @@ export interface Iproducto
     tipo:string;
     precio:number;
     stock:number;
+    image:string;
+    oferta:boolean;
 }

@@ -5,17 +5,30 @@
         <th>Tipo</th>
         <th>Precio</th>
         <th>Stock</th>
+        <th>Imagen</th>
         <th>Agregar al carrito</th>
       </tr>
     </thead>
   
     <tbody>
-      <tr *ngFor="let productos of producto">
-        <td>{{ productos.nombre }}</td>
-        <td>{{ productos.tipo }}</td>
-        <td>{{ productos.precio }}</td>
-        <td>{{ productos.stock }}</td>
-        <td><button class="btn btn-primary">Sumar</button></td>
+      
+      @for (producto of productos; track producto.nombre) {
+        <tr [ngClass]="{'resaltar':producto.oferta}" >
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.tipo }}</td>
+        <td>{{ producto.precio }}</td>
+        @if (producto.stock>0) {
+          <td>{{ producto.stock }}</td>
+        }@else {
+          <td>SIN STOCK</td>
+        }     
+        <td><img [src]="producto.image" width="80" height="60"  /></td>
+        <td><button class="btn btn-primary">Comprar</button></td>
       </tr>
+    }
+        @empty{
+          <tr><td>No hay contenido para mostrar</td></tr>
+        }       
+       
     </tbody>
   </table>
