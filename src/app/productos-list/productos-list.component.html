@@ -6,6 +6,7 @@
         <th>Precio</th>
         <th>Stock</th>
         <th>Imagen</th>
+        <th>Cantidad</th>
         <th>Agregar al carrito</th>
       </tr>
     </thead>
@@ -23,6 +24,9 @@
           <td>SIN STOCK</td>
         }     
         <td><img [src]="producto.image" width="80" height="60"  /></td>
+        <td><button class="btn btn-primary" (click)="restarCantidad(producto)">-</button>
+         <input type="number" [(ngModel)]="producto.cantidad">
+          <button class="btn btn-primary" (click)="sumarCantidad(producto)">+</button></td>
         <td><button class="btn btn-primary">Comprar</button></td>
       </tr>
     }

@@ -5,4 +5,5 @@ export interface Iproducto
     stock:number;
     image:string;
     oferta:boolean;
+    cantidad:number;
 }
