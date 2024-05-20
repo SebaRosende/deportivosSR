@@ -16,7 +16,7 @@
         <tr [ngClass]="{'resaltar':producto.oferta}" >
         <td>{{ producto.nombre }}</td>
         <td>{{ producto.tipo }}</td>
-        <td>{{ producto.precio }}</td>
+        <td>{{ producto.precio | currency }}</td>
         @if (producto.stock>0) {
           <td>{{ producto.stock }}</td>
         }@else {
