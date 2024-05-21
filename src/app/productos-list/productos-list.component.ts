@@ -8,6 +8,12 @@ import { Iproducto } from './interfaces/Iproducto';
 })
 export class ProductosListComponent {
 
+agregarCarrito(producto: Iproducto):void {
+  
+throw new Error('Method not implemented.');
+
+}
+
   sumarCantidad(producto: Iproducto):void {
    if(producto.cantidad < producto.stock)
     producto.cantidad++;

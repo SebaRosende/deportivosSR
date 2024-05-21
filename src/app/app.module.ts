@@ -5,13 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductosListComponent } from './productos-list/productos-list.component';
 import { CarritoListComponent } from './carrito-list/carrito-list.component';
+import { DeportivosrProductosComponent } from './deportivosr-productos/deportivosr-productos.component';
+import { DeportivosrAcercaDeComponent } from './deportivosr-acerca-de/deportivosr-acerca-de.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductosListComponent,
-    CarritoListComponent
-  ],
+    CarritoListComponent,
+    DeportivosrProductosComponent,
+    DeportivosrAcercaDeComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

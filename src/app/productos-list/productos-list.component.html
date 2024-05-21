@@ -1,4 +1,5 @@
-<table class="table">
+<h3>Lista de productos</h3>
+<table class="table text-center">
     <thead>
       <tr>
         <th>Nombre</th>
@@ -24,10 +25,15 @@
           <td>SIN STOCK</td>
         }     
         <td><img [src]="producto.image" width="80" height="60"  /></td>
-        <td><button class="btn btn-primary" (click)="restarCantidad(producto)">-</button>
-         <input type="number" [(ngModel)]="producto.cantidad">
-          <button class="btn btn-primary" (click)="sumarCantidad(producto)">+</button></td>
-        <td><button class="btn btn-primary">Comprar</button></td>
+
+        <td>
+          <button class="btn btn-primary" (click)="restarCantidad(producto)">-</button>
+         <input class="input" type="number" [(ngModel)]="producto.cantidad">
+          <button class="btn btn-primary" (click)="sumarCantidad(producto)">+</button>
+        </td>
+        <td>
+          <button class="btn btn-primary" (click)="agregarCarrito(producto)">Comprar</button>
+        </td>
       </tr>
     }
         @empty{
