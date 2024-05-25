@@ -7,6 +7,7 @@ import { ProductosListComponent } from './productos-list/productos-list.componen
 import { CarritoListComponent } from './carrito-list/carrito-list.component';
 import { DeportivosrProductosComponent } from './deportivosr-productos/deportivosr-productos.component';
 import { DeportivosrAcercaDeComponent } from './deportivosr-acerca-de/deportivosr-acerca-de.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DeportivosrAcercaDeComponent } from './deportivosr-acerca-de/deportivos
     ProductosListComponent,
     CarritoListComponent,
     DeportivosrProductosComponent,
-    DeportivosrAcercaDeComponent  ],
+    DeportivosrAcercaDeComponent,
+    InputIntegerComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -26,11 +26,8 @@
         }     
         <td><img [src]="producto.image" width="80" height="60"  /></td>
 
-        <td>
-          <button class="btn btn-primary" (click)="restarCantidad(producto)">-</button>
-         <input class="input" type="number" [(ngModel)]="producto.cantidad">
-          <button class="btn btn-primary" (click)="sumarCantidad(producto)">+</button>
-        </td>
+        <app-input-integer [producto]="producto" *ngIf="producto.stock"></app-input-integer>
+        
         <td>
           <button class="btn btn-primary" (click)="agregarCarrito(producto)">Comprar</button>
         </td>

@@ -14,14 +14,6 @@ throw new Error('Method not implemented.');
 
 }
 
-  sumarCantidad(producto: Iproducto):void {
-   if(producto.cantidad < producto.stock)
-    producto.cantidad++;
-  }
-  restarCantidad(producto: Iproducto):void {
-    if(producto.cantidad>0)
-    producto.cantidad--;
-  }
 productos: Array<Iproducto> = [
     
     {
