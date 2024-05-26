@@ -25,12 +25,16 @@
           <td>SIN STOCK</td>
         }     
         <td><img [src]="producto.image" width="80" height="60"  /></td>
-
-        <app-input-integer [producto]="producto" *ngIf="producto.stock"></app-input-integer>
         
-        <td>
-          <button class="btn btn-primary" (click)="agregarCarrito(producto)">Comprar</button>
+        <td><app-input-integer [(quantity)]="producto.cantidad" [max]="producto.stock" *ngIf="producto.stock"
+          (maxAlcanzado)="maxAlc($event)"></app-input-integer>
+       
+        <!--  Cant: {{producto.cantidad}}
+          corchetes: datos que ingresan ->son el Input
+        parentisis: datos que salen->son el @Output -->
         </td>
+
+        <td><button class="btn btn-primary" (click)="agregarCarrito(producto)">Comprar</button></td>
       </tr>
     }
         @empty{

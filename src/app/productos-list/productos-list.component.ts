@@ -8,6 +8,10 @@ import { Iproducto } from './interfaces/Iproducto';
 })
 export class ProductosListComponent {
 
+maxAlc(m:String) {
+alert(m);
+}
+
 agregarCarrito(producto: Iproducto):void {
   
 throw new Error('Method not implemented.');

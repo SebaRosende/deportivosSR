@@ -1,5 +1,5 @@
-import { Component, Input} from '@angular/core';
-import { Iproducto } from '../productos-list/interfaces/Iproducto';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-input-integer',
@@ -9,15 +9,32 @@ import { Iproducto } from '../productos-list/interfaces/Iproducto';
 export class InputIntegerComponent{
 
 
-  @Input()
-  producto: Iproducto;  
+  //@Input()
+  //productoChild: Iproducto;  
 
-  sumarCantidad(producto: Iproducto):void {
-    if(producto.cantidad < producto.stock)
-     producto.cantidad++;
+  @Input()
+  quantity:number;
+
+  @Input()
+  max:number;
+
+  @Output()
+  quantityChange:EventEmitter<number> = new EventEmitter<number>();
+
+  @Output()
+  maxAlcanzado: EventEmitter<String> = new EventEmitter<String>();
+
+  sumarCantidad():void {
+    if(this.quantity < this.max){
+    this.quantity++;
+  this.quantityChange.emit(this.quantity);
+    }else
+      this.maxAlcanzado.emit("Se alcanzo el máximo");
+  
    }
-   restarCantidad(producto: Iproducto):void {
-     if(producto.cantidad>0)
-     producto.cantidad--;
+   restarCantidad():void {
+     if(this.quantity>0)
+     this.quantity--;
+     this.quantityChange.emit(this.quantity);
    }
 }
