@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Iproducto } from './interfaces/Iproducto';
+import { CarritoService } from '../carrito.service';
 
 @Component({
   selector: 'app-productos-list',
@@ -8,44 +9,59 @@ import { Iproducto } from './interfaces/Iproducto';
 })
 export class ProductosListComponent {
 
-maxAlc(m:String) {
-alert(m);
-}
-
-agregarCarrito(producto: Iproducto):void {
   
-throw new Error('Method not implemented.');
 
-}
+  constructor(private carrito: CarritoService) {
+    this.carrito;
+  }
 
-productos: Array<Iproducto> = [
-    
+
+  agregar(producto: Iproducto): void {
+
+
+    this.carrito.agregarProductoCarrito(producto);
+    producto.stock-= producto.cantidad;
+    producto.cantidad = 0;
+
+
+  }
+
+  maxAlc(m: String) {
+    alert(m);
+  }
+
+
+  productos: Array<Iproducto> = [
+
     {
       nombre: 'Pelota de basquet n° 5',
       tipo: 'Pelota',
       precio: 199,
       stock: 0,
-      image:"assets/imagenes/pelotaBasquet.png",
-      oferta:false,
-      cantidad:0,
+      image: "assets/imagenes/pelotaBasquet.png",
+      oferta: false,
+      cantidad: 0,
     },
     {
       nombre: 'Pelota de fútbol n° 3',
       tipo: 'Pelota',
       precio: 150,
       stock: 5,
-      image:"assets/imagenes/pelotaBasquet.png",
-      oferta:true,
-      cantidad:0,
+      image: "assets/imagenes/pelotaBasquet.png",
+      oferta: true,
+      cantidad: 0,
     },
     {
       nombre: 'Aro de basquet',
       tipo: 'Accesorios',
       precio: 250,
       stock: 9,
-      image:"assets/imagenes/pelotaBasquet.png",
-      oferta:false,
-      cantidad:0,
+      image: "assets/imagenes/pelotaBasquet.png",
+      oferta: false,
+      cantidad: 0,
     },
   ];
+
+
+
 }

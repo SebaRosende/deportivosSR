@@ -30,11 +30,11 @@
           (maxAlcanzado)="maxAlc($event)"></app-input-integer>
        
         <!--  Cant: {{producto.cantidad}}
-          corchetes: datos que ingresan ->son el Input
-        parentisis: datos que salen->son el @Output -->
+          corchetes: datos que ingresan ->son el Input en el ts.
+        parentisis: datos que salen->son el @Output y funciona con el emit() -->
         </td>
 
-        <td><button class="btn btn-primary" (click)="agregarCarrito(producto)">Comprar</button></td>
+        <td><button class="btn btn-primary" (click)="agregar(producto)">Comprar</button></td>
       </tr>
     }
         @empty{

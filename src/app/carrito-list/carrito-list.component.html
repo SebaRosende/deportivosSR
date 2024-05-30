@@ -1,13 +1,10 @@
 
 <h3>Carrito de compras</h3>
 
-    <table class="table">
-       
-      
-        <tbody>
-          
-        <tr><td>texto</td></tr>   
-        <tr><td>texto</td></tr>   
-          
-    </tbody>
-      </table>
+    <ul>
+        @for(p of carrito track p.nombre){
+        <li  >
+       [{{p.nombre}}:{{p.cantidad}}
+        </li>
+    }
+    </ul>
