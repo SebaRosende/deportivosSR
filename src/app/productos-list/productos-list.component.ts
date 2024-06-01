@@ -23,6 +23,7 @@ export class ProductosListComponent {
     producto.stock-= producto.cantidad;
     producto.cantidad = 0;
 
+   
 
   }
 

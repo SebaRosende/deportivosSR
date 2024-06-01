@@ -26,15 +26,15 @@
         }     
         <td><img [src]="producto.image" width="80" height="60"  /></td>
         
-        <td><app-input-integer [(quantity)]="producto.cantidad" [max]="producto.stock" *ngIf="producto.stock"
+        <td>
+          <app-input-integer [(quantity)]="producto.cantidad" [max]="producto.stock" *ngIf="producto.stock"
           (maxAlcanzado)="maxAlc($event)"></app-input-integer>
-       
-        <!--  Cant: {{producto.cantidad}}
+          <!--  Cant: {{producto.cantidad}}
           corchetes: datos que ingresan ->son el Input en el ts.
         parentisis: datos que salen->son el @Output y funciona con el emit() -->
         </td>
 
-        <td><button class="btn btn-primary" (click)="agregar(producto)">Comprar</button></td>
+        <td><button class="btn btn-primary" (click)="agregar(producto)"  *ngIf="producto.cantidad!=0" >Comprar</button></td>
       </tr>
     }
         @empty{

@@ -2,9 +2,10 @@
 <h3>Carrito de compras</h3>
 
     <ul>
-        @for(p of carrito track p.nombre){
-        <li  >
-       [{{p.nombre}}:{{p.cantidad}}
+        <li *ngFor="let p of (listaCarrito$ | async)">
+            {{p.nombre}}:   {{p.cantidad}} 
+
         </li>
-    }
     </ul>
+
+   

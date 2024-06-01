@@ -5,11 +5,13 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CarritoService {
 
   private _lista: Iproducto[]=[];
+  
   lista: BehaviorSubject <Iproducto[]> = new BehaviorSubject(this._lista);
-
+  
   constructor() { }
   
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CarritoService } from '../carrito.service';
 import { Iproducto } from '../productos-list/interfaces/Iproducto';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-carrito-list',
@@ -9,10 +10,13 @@ import { Iproducto } from '../productos-list/interfaces/Iproducto';
 })
 export class CarritoListComponent {
 
-  listaCarrito: Iproducto[]=[];
+  listaCarrito$: Observable <Iproducto[]>;
 
   constructor(private carrito: CarritoService){
-    carrito.lista.subscribe(c=>this.listaCarrito = c);
+    this.listaCarrito$ = carrito.lista.asObservable();
+
+
+ //   carrito.lista.subscribe(c=>this.listaCarrito = c);
 
   }
 
