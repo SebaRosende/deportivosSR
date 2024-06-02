@@ -15,8 +15,9 @@ export class ProductosListComponent {
     private productoDataService: ProductosDataService) {
   }
   productos: Array<Iproducto> = [];
-  ngOnInit():void{
-    this.productoDataService.getAll().subscribe(data=> this.productos = data );
+
+  ngOnInit(): void {
+    this.productoDataService.getAll().subscribe(data => this.productos = data);
   }
 
   agregar(producto: Iproducto): void {
@@ -30,7 +31,7 @@ export class ProductosListComponent {
   }
 
 
-  
+
 
 
 

@@ -7,3 +7,4 @@ export interface Iproducto
     oferta:boolean;
     cantidad:number;
 }
+

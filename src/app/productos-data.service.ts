@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Iproducto } from './productos-list/interfaces/Iproducto';
 
 const URL= "https://demo7067008.mockable.io/productos";
@@ -14,8 +14,14 @@ export class ProductosDataService {
 
 public getAll(): Observable<Iproducto[]> {
 //consumir la api
-return this.http.get<Iproducto[]>(URL);
+
+return this.http.get<Iproducto[]>(URL).pipe(
+  tap((productos : Iproducto[]) => productos.forEach(producto => producto.cantidad=0))
+
+);
 
 }
 
 }
+
+//tap transforma datos de entrada
