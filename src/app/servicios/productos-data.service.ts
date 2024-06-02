@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { Iproducto } from './productos-list/interfaces/Iproducto';
+import { Iproducto } from '../productos-list/interfaces/Iproducto';
 
 const URL= "https://demo7067008.mockable.io/productos";
 

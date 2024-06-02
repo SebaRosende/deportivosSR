@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Iproducto } from './productos-list/interfaces/Iproducto';
+import { Iproducto } from '../productos-list/interfaces/Iproducto';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Iproducto } from './interfaces/Iproducto';
-import { CarritoService } from '../carrito.service';
-import { ProductosDataService } from '../productos-data.service';
+import { CarritoService } from '../servicios/carrito.service';
+import { ProductosDataService } from '../servicios/productos-data.service';
 
 
 @Component({

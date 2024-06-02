@@ -9,6 +9,7 @@ import { DeportivosrProductosComponent } from './deportivosr-productos/deportivo
 import { DeportivosrAcercaDeComponent } from './deportivosr-acerca-de/deportivosr-acerca-de.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     CarritoListComponent,
     DeportivosrProductosComponent,
     DeportivosrAcercaDeComponent,
-    InputIntegerComponent  ],
+    InputIntegerComponent,
+    ContactoComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

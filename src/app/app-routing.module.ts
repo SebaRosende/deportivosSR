@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DeportivosrProductosComponent } from './deportivosr-productos/deportivosr-productos.component';
 import { DeportivosrAcercaDeComponent } from './deportivosr-acerca-de/deportivosr-acerca-de.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,12 @@ const routes: Routes = [
 {
   path: 'acercaDe',
   component: DeportivosrAcercaDeComponent,
+},
+{
+  path: 'contacto',
+  component: ContactoComponent,
 }
+
 
 
 ];

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarritoService } from '../carrito.service';
+import { CarritoService } from '../servicios/carrito.service';
 import { Iproducto } from '../productos-list/interfaces/Iproducto';
 import { Observable } from 'rxjs';
 

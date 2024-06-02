@@ -1,27 +1,24 @@
-# DeportivosSR
+## Abordaje del proyecto
+Para el desarrollo de esta aplicación seguí la estructura del seminario, elegí la temática deportiva e implemente una api con Mockable para traer los datos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Haciendo un resumen, me pareció un framework interesante, práctico y con mucho potencial. 
+La separación en componentes reduce los problemas y ayuda a la mantenibilidad del proyecto.
+No hice mucho hincapié en lo visual por cuestiones de tiempo y tampoco es lo que más me gusta, así que boostrap me ayudo con lo mínimo que necesite.
 
-## Development server
+Como importante destaco la base de las materias WEB1 y WEB2, ya que sin eso se me hubiese hecho difícil realizarlo. También se abordaron conceptos de PROG2 como patrones, clases e interfaces que sirvieron para entender el entorno.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Como dato adicional, codifique todo el código sobre la web de Stackblitz. Me pareció cómodo para poder hacerlo desde cualquier sitio y con cualquier pc con internet.
 
-## Code scaffolding
+## API
+API:https://demo7067008.mockable.io/productos
+https://www.mockable.io/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Stackblitz
+https://stackblitz.com/~/github.com/SebaRosende/deportivosSR
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Datos personales
+SEBASTIÁN ROSENDE
+DNI 33109779
+peperosende1515@gmail.com
+Sede Olavarría
+TUDAI
